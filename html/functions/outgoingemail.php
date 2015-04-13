@@ -17,31 +17,28 @@ function auto_email($address,$subject,$message)
         else
                 return false;
 }
-function smtpEmail($address,$subject,$message,$recipient_name="",$attachment="")
-{	
- 			
+function smtpEmail($address,$subject,$message,$recipient_name="",$attachment="", $cc)
+{
 	require_once("functions/PHPMailer_5.2.1/class.phpmailer.php");
-	$mail = new PHPMailer();	
-	//$mail->IsSMTP();                                   // send via SMTP
-
-	//$mail->Host     = SMTP_HOST; // SMTP servers
-	//$mail->SMTPAuth = true;     // turn on SMTP authentication
-	//$mail->Username = SMTP_USERNAME;  // SMTP username
-	//$mail->Password = SMTP_PASSWORD; // SMTP password
-	//$mail->From     = SITE_EMAIL;
-	//$mail->FromName = SITE_NAME;
+	$mail = new PHPMailer();
 		
 	$mail->AddAddress($address,$recipient_name);
-	//$mail->AddAddress("ellen@site.com");               // optional name
-	//$mail->AddReplyTo($site_email,$smtp_name);
 	$mail->SetFrom('customerservice@imaginecrafts.com', 'IMAGINE Crafts');
 	$mail->AddReplyTo("customerservice@imaginecrafts.com", "IMAGINE Crafts");
 
 	$mail->WordWrap = 50;                              // set word wrap
 	if($attachment != "") //used for buroware exports only
 		$mail->AddAttachment($attachment);      // attachment
-	//$mail->AddAttachment("/tmp/image.jpg", "new.jpg");
 	$mail->IsHTML(true);                               // send as HTML
+
+	if(!empty($cc)){
+		$cc = explode(", " $cc);
+
+		$l = count($cc);
+		for($i = 0; $i < $l; $i++){
+			$mail.addCC($cc[$i]);
+		}
+	}
 
 	$mail->Subject  =  $subject;
 	$mail->Body     =  nl2br($message);
@@ -62,26 +59,8 @@ function direct_email($address,$subject,$message,$sender_name,$sender_email)
 {
 	if($sender_name == "")
 		$sender_name = $sender_email;
-	//if($sender_email == "" and isset($_SESSION['USERID']))
-	//	$sender_email = accountEmail($_SESSION['USERID']);
 
 	$message = lineToBR($message);
-
-        //$headers = array();
-        //$headers[]= "MIME-Version: 1.0";
-        //$headers[]= "Content-type: text/html; charset=iso-8859-1";
-        //$headers[]= "From: IMAGINE Crafts <customerservice@imaginecrafts.com>";
-        //$headers[]= "Reply-To: IMAGINE Crafts <customerservice@imaginecrafts.com>";
-        //$headers[]= "X-Mailer: PHP/".phpversion();
-        //$headerStr = implode("\r\n", $headers);
-
-	// $headers .= "From: $sender_name <$sender_email>" . "\r\n";
-	// $headers .= "X-Sender: $sender_email\n";
-	// $headers .= "X-Mailer: PHP\n";
-	// $headers .= "X-Priority: 3\n";
-	// $headers .= "Return-Path: $sender_email\n";
-	// $headers .= "Reply-To: IMAGINE Crafts <customerservice@imaginecrafts.com>" . "\r\n";
-	// $headers .= "Bcc: matthew@matthewfleming.com\n";	
 	
 	$message = stripslashes($message);
 	$message = wordwrap($message,200);
@@ -256,9 +235,11 @@ function sendOrderEmail($orderid)
  	$message .= '<br /><br />For questions regarding your order, please <a href="http://www.imaginecrafts.com/contact">contact customer service</a> anytime or call (800) 769-6633 Monday-Friday 8:30am to 4pm PST';
 	$message .= "<br /><br /><br />";
 	$message .= '<a href="http://www.imaginecrafts.com/mailing-list">Sign up for our mailing list</a> for the latest projects, giveaway news, and more.';
- 	
- 	smtpEmail(accountEmail($row['ACCOUNTID']),"Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS");
- 	smtpEmail("michellel@imaginecrafts.com","Michelle Copy - Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS");
+
+	$accountEmails = accountEmails($row['ACCOUNTID']);
+ 	smtpEmail($accountEmails["EMAIL"],"Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS",$accountEmails["EMAIL2"]);
+
+	smtpEmail("michellel@imaginecrafts.com","Michelle Copy - Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS");
  	smtpEmail("sales@imaginecrafts.com","Sales Copy - Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS");
 	// smtpEmail("erics121@comcast.net","Eric Copy - Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS"); 	
 }
@@ -318,7 +299,7 @@ function sendOrderShippedNotification($orderid)
 	$message .= "<br /><br /><br />";
 	$message .= '<a href="http://www.imaginecrafts.com/mailing-list">Sign up for our mailing list</a> for the latest projects, giveaway news, and more.';
 
-	smtpEmail(accountEmail($row['ACCOUNTID']),"Order #".$row['ID']." Shipped",$message,"Imagine Crafts");
-	// smtpEmail("erics121@comcast.net","Order #".$row['ID']." Shipped",$message,"Imagine Crafts");	
+	$accountEmails = accountEmails($row['ACCOUNTID']);
+	smtpEmail($accountEmails["EMAIL"],"Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS",$accountEmails["EMAIL2"]);
 }
 ?>

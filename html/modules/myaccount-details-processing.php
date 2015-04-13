@@ -12,8 +12,8 @@ if($_POST['BUTTON'] == "Save")
 	$country = $_POST['COUNTRY'];
 	$phone1 = $_POST['PHONE1'];
 	$phone2 = $_POST['PHONE2'];
-	$email = $_POST['EMAIL'];
-	$email2 = $_POST['EMAIL2'];
+	$email = trim($_POST['EMAIL']);
+	$email2 = validateEmail2(trim($_POST['EMAIL2']));
 	$fax = $_POST['FAX'];
 	$url = $_POST['URL'];
 	
@@ -23,6 +23,8 @@ if($_POST['BUTTON'] == "Save")
 		$error = "Please enter a valid email address.";
 	else if(!uniqueEmailAccount($account['ID'],$email))
 		$error = "The email $email is in use by another customer or account.";
+	else if($email2 == "error")
+		$error = "Additional Emails must be a list of valid emails, separated by spaces.";
 	else
 	{
 		if($account['EMAIL'] != $email)

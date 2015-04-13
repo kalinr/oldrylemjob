@@ -28,7 +28,7 @@ if($_POST['BUTTON'] == "Save" or $_POST['BUTTON'] == "Continue" or $_POST['BUTTO
 	$phone1 = trim($_POST['PHONE1']);
 	$phone2 = trim($_POST['PHONE2']);
 	$email = trim(mysqlClean(strtolower($_POST['EMAIL'])));
-	$email2 = trim(mysqlClean(strtolower($_POST['EMAIL2'])));
+	$email2 = validateEmail2(trim(mysqlClean(strtolower($_POST['EMAIL2']))));
 	$fax = trim($_POST['FAX']);
 	$url = trim($_POST['URL']);
 	$discount = ereg_replace("[^0-9.-]","",$_POST['DISCOUNT']);
@@ -52,6 +52,8 @@ if($_POST['BUTTON'] == "Save" or $_POST['BUTTON'] == "Continue" or $_POST['BUTTO
 		$error = "Please enter a phone number.";
 	else if($email == "" or !validEmail($email))
 		$error = "Please enter a valid email address.";
+	else if($email2 == "error")
+		$error = "Additional Emails must be a list of valid emails, separated by spaces.";
 	else if(!uniqueEmailAccount($query_array[1],$email))
 		$error = "The email $email is in use by another customer or account.";
 	else

@@ -113,12 +113,28 @@ function uniqueEmailAccount($accountid,$email)
 	else
 		return false;
 }
-function accountEmail($accountid)
+function accountEmails($accountid)
 {
-	$query = "SELECT EMAIL FROM accounts WHERE ID='$accountid'";
+	$query = "SELECT EMAIL, EMAIL2 FROM accounts WHERE ID='$accountid'";
 	$result = mysql_query($query) or die ("error1" . mysql_error());
 	$row = mysql_fetch_array($result);
-	return $row['EMAIL'];
+	return $row;
+}
+function validateEmail2 ($email2){
+	if($email2 == ""){
+		return $email2;
+	}
+
+	$aEmail2 = explode(" ", $email2);
+
+	$l = count($aEmail2);
+	for($i = 0; $i < $l; $i++){
+		if(!validEmail($aEmail2[$i])){
+			return "error";
+		}
+	}
+
+	return $email2;
 }
 function createPassword($totalChar="")
 {
