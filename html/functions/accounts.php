@@ -120,9 +120,9 @@ function accountEmails($accountid)
 	$row = mysql_fetch_array($result);
 	return $row;
 }
-function validateEmail2 ($email2){
+function validEmail2 ($email2){
 	if($email2 == ""){
-		return $email2;
+		return true;
 	}
 
 	$aEmail2 = explode(" ", $email2);
@@ -130,11 +130,11 @@ function validateEmail2 ($email2){
 	$l = count($aEmail2);
 	for($i = 0; $i < $l; $i++){
 		if(!validEmail($aEmail2[$i])){
-			return "error";
+			return false;
 		}
 	}
 
-	return $email2;
+	return true;
 }
 function createPassword($totalChar="")
 {

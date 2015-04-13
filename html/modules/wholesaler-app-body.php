@@ -33,7 +33,7 @@ Crafts' <a href="/terms-of-use">Terms of Use</a>.</p>
 <p>Company<br /><input type="text" name="COMPANY" value="<? echo stripslashes($company); ?>" /></p>
 <p>Contact Name<br /><input type="text" name="CONTACT_NAME" value="<? echo stripslashes($contact_name); ?>" /></p>
 <p>Email<br /><input type="text" name="EMAIL" value="<? echo stripslashes($email); ?>" /></p>
-<p>Additional Emails<br /><input type="text" name="EMAIL2" value="<? echo stripslashes($email); ?>" /></p>
+<p>Additional Emails<br /><input type="text" name="EMAIL2" value="<? echo stripslashes($email2); ?>" /></p>
 <p>Phone<br /><input type="text" name="PHONE" value="<? echo stripslashes($phone); ?>" /></p>
 <p>Fax<br /><input type="text" name="FAX" value="<? echo stripslashes($fax); ?>" /></p>
 <p>Resale ID<br /><input type="text" name="RESALE_ID" value="<? echo stripslashes($resale_id); ?>" /></p>

@@ -8,7 +8,7 @@ if($_POST['BUTTON'] == "Submit")
 	$first = $nameArr[0];
 	$last = $nameArr[1];
 	$email = trim($_POST['EMAIL']);
-	$email2 = validateEmail2(trim($_POST['EMAIL2']));
+	$email2 = trim($_POST['EMAIL2']);
 	$phone = $_POST['PHONE'];
 	$fax = $_POST['FAX'];
 	$resale_id = $_POST['RESALE_ID'];
@@ -32,7 +32,7 @@ if($_POST['BUTTON'] == "Submit")
 		$error = "Please enter a contact name.";
 	else if($email == "" or !validEmail($email))
 		$error = "Please enter a valid email address.";
-	else if($email2 == "error")
+	else if(!validEmail2($email2))
 		$error = "Additional Emails must be a list of valid emails, separated by spaces.";
 	else if($address == "")
 		$error = "Please enter an address.";
@@ -128,7 +128,7 @@ else
 	$contact_name = $account['FIRST'].' '.$account['LAST'];
 	$company = $account['ORGANIZATION'];
 	$email = $account['EMAIL'];
-	$email = $account['EMAIL2'];
+	$email2 = $account['EMAIL2'];
 	$phone = $account['PHONE1'];
 	$fax = $account['FAX'];
 	$resale_id = $account['RESALE_ID'];

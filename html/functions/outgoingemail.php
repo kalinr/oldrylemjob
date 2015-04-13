@@ -32,7 +32,7 @@ function smtpEmail($address,$subject,$message,$recipient_name="",$attachment="",
 	$mail->IsHTML(true);                               // send as HTML
 
 	if(!empty($cc)){
-		$cc = explode(", " $cc);
+		$cc = explode(" ", $cc);
 
 		$l = count($cc);
 		for($i = 0; $i < $l; $i++){
@@ -237,7 +237,7 @@ function sendOrderEmail($orderid)
 	$message .= '<a href="http://www.imaginecrafts.com/mailing-list">Sign up for our mailing list</a> for the latest projects, giveaway news, and more.';
 
 	$accountEmails = accountEmails($row['ACCOUNTID']);
- 	smtpEmail($accountEmails["EMAIL"],"Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS",$accountEmails["EMAIL2"]);
+ 	smtpEmail($accountEmails["EMAIL"], "Order #" .$row['ID'] ." Confirmation", $message, "ImagineCRAFTS", "", $accountEmails["EMAIL2"]);
 
 	smtpEmail("michellel@imaginecrafts.com","Michelle Copy - Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS");
  	smtpEmail("sales@imaginecrafts.com","Sales Copy - Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS");
@@ -300,6 +300,6 @@ function sendOrderShippedNotification($orderid)
 	$message .= '<a href="http://www.imaginecrafts.com/mailing-list">Sign up for our mailing list</a> for the latest projects, giveaway news, and more.';
 
 	$accountEmails = accountEmails($row['ACCOUNTID']);
-	smtpEmail($accountEmails["EMAIL"],"Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS",$accountEmails["EMAIL2"]);
+	smtpEmail($accountEmails["EMAIL"], "Order #".$row['ID']." Confirmation", $message, "ImagineCRAFTS", "", $accountEmails["EMAIL2"]);
 }
 ?>
