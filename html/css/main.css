@@ -1,0 +1,242 @@
+/* "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif */
+
+@media all {
+
+  body {margin: 0; padding: 0;}
+  body, input, textarea, select, option {font: 12pt/1.3 'Open Sans', sans-serif;}
+  img, abbr {border: 0;}
+  a {color: #5eaace; text-decoration: none;}
+  a:hover {text-decoration: underline;}
+  h1 {font: 26pt 'Open Sans', sans-serif;}
+  h2 {font: 16pt 'Open Sans', sans-serif;}
+  h3 {font: 14pt 'Open Sans', sans-serif;}
+  h2.collectionshead {color:#000; padding-top:18px;}
+  hr {margin: auto 15px;}
+  fieldset {border: solid 1px #088996; padding: 10px 0 15px 25px; margin: 5px 0 15px; }
+  legend {color:#088996; font-weight:normal;}
+  input[type="submit"]:hover, input[type="button"]:hover {background:#E0880C; cursor: pointer;}
+
+  #utilityNav {font: 10pt 'Open Sans', sans-serif; text-align: right; width: 1035px; padding-right: 5px; margin: 0 auto; height: 30px; padding-top: 18px; border-bottom: 1px solid #B0B0B1; color: #707174;}
+  #utilityNav a, #tNav a {color: #707174;}
+  #logoTopnav {position: relative; top: 0; left: 0; font: 21pt 'Open Sans', sans-serif; width: 1040px; margin: 0 auto; height: 143px; border-bottom: 1px solid #B0B0B1; color: #707174;}
+  #logoSpc {position: absolute; top: 0; left: 5px; width: 295px; padding-top: 18px;}
+  #tNav {position: absolute; top: 0; left: 300px; width: 740px; padding-top: 56px; text-align: right;}
+  #tNav a {padding-left: 50px;}
+  #footerArea {border-top: 1px solid #B0B0B1; font: 10pt 'Open Sans', sans-serif; width: 1040px; margin: 15px auto 0; height: 80px; position: relative; top: 0; left: 0;}
+  #copyright {position: absolute; top: 20px; left: 5px; width: 360px; color: #B2B0B0;}
+  #mailingList {position: absolute; top: 20px; left: 365px; width: 310px; text-align: center; color: #B2B0B0;}
+  #mailingList a {color: #B2B0B0;}
+  #socialMedia {position: absolute; top: 15px; left: 675px; width: 365px; text-align: right;}
+  #socialMedia a {padding-left: 15px;}
+  #header {width:990px; height:188px; margin: 0 auto; padding:0;}
+  #header p.floating {float:left; padding:0 8px; font-size: 12px; color:#292D90;}
+  #topmenu {width:790px; height:24px; margin:0; padding:0; float:right;}
+  #topmenu img {margin-right:40px; height:24px;}
+  #topmenu img.firstone {margin-left:25px;}
+  #topmenu img.lastone {margin-right:0;}
+  #frame {width: 1040px; margin: 20px auto 0;}
+  #homeframe {width: 1280px; margin: 0 auto;}
+  .swatchcolor {float:left; height:40px; width:40px; margin-right:10px; margin-bottom:10px; border:1px solid #999; display: block;}
+  #tooltip{position:absolute; border:1px solid #23288C; background:#00ADEF; padding:4px 6px; color:#fff; display:none; font-family: 'Open Sans', sans-serif; font-size:16px; font-weight:bold;}
+  #tooltip2{position:absolute; border:1px solid #333; background:#fff; padding:5px 7px; color:#333; display:none; font-family: 'Open Sans', sans-serif; font-size:12px; font-weight:normal; max-width:450px;}
+  #shoppingcarttable {width:100%; margin: 12px 0; padding:0; padding-bottom:12px; border:0; border-collapse: collapse;}
+  #shoppingcarttable td {padding:8px 4px; border-right:1px dotted #aaa; border-bottom:1px dotted #aaa; vertical-align:middle;}
+  #shoppingcarttable td.col1 {border-left:1px dotted #aaa;}
+  #shoppingcarttable td.skucol {width:85px;}
+  #shoppingcarttable td a:hover {text-decoration:none; color:#000;}
+  #shoppingcarttable tr.headrow {font-weight:normal; color:#fff; background:#00ADEF;}
+  #shoppingcarttable td.w55 {text-align:center; width:55px;}
+  #shoppingcarttable td.cost {text-align:center;width:90px;}
+  #shoppingcarttable td.center {text-align:center;}
+  #salesreporttable {width:93%; margin: 4px auto; padding:0;}
+  #salesreporttable td {padding:7px 6px; margin:0; line-height:14px; font-size:12px; font-family: 'Open Sans', sans-serif;}
+  #salesreporttable td.bold {font-weight:bold;}
+  #myform, .myForm {margin: 15px 0;}
+  .myForm input[type="text"], .myForm textarea, .myForm select, #myform input[type="text"], input[type="password"], #myform textarea, #myform select {font-size: 14px; margin-top: 3px; display: block; padding: 6px; border: solid 1px #bbb; color:#444; background-color:#fbfbfb; width:225px;}
+  .myForm select, #myform select {padding: 5px; width:245px;}
+  .myForm textarea, #myform textarea {height:110px;}
+  .myForm input[type="text"]:focus, .myForm textarea:focus, .myForm input[type="password"]:focus, .myForm select:focus, #myform input[type="text"]:focus, #myform textarea:focus, #myform input[type="password"]:focus, #myform select:focus {border: solid 1px #000; background:#eee;}
+  .myForm input[type="radio"], #myform input[type="radio"] {padding:10px 10px 10px 0;}
+  .myForm .shortfield, #myform .shortfield {width:175px;}
+  .myForm .thestate, #myform .thestate {width:190px;}
+  .myForm .thezipcode, #myform.thezipcode {width:90px;}
+  #myform .dataTbl .qtyFld {width: 30px;}
+  .myForm input[type="submit"], #myform input[type="submit"] {font-size:12pt; font-weight:normal; padding:5px; color:#eee; background:#4987CB; width:165px; border:1px solid #333;}
+  .myForm input[type="submit"]:hover, #myform input[type="submit"]:hover {background:#00ADEF;}
+  .myForm input[type="button"], #myform input[type="button"] {font-size:12pt; font-weight:normal; padding:5px; color:#eee; background:#4987CB; width:250px; border:1px solid #333;}
+  #eform  {margin: 15px 20px; font-size:14pt;}
+  #eform input[type="text"], input[type="password"], #eform textarea, #eform select {font-size: 14px; margin: 3px 0 10px 0; display: block; padding: 6px; border: solid 1px #bbb; color:#444; background-color:#fbfbfb; width:225px;}
+  #eform select {padding: 5px; width:245px;}
+  #eform textarea {height:110px;}
+  #eform input[type="text"]:focus, #eform textarea:focus, #eform input[type="password"]:focus, #eform select:focus {border: solid 1px #000; background:#eee;}
+  #eform input[type="radio"] {padding:10px 10px 10px 0;}
+  #eform .shortfield {width:175px;}
+  #eform .thestate {width:190px;}
+  #eform.thezipcode {width:90px;}
+  #eform input[type="submit"] {font-weight:normal; padding:5px; color:#eee; background:#4987CB; width:250px; border:1px solid #333;}
+  #eform input[type="button"] {font-weight:normal; padding:5px; color:#eee; background:#4987CB; width:250px; border:1px solid #333;}
+  #eform #businessname {visibility:hidden; margin-top:10px;}
+  #errordiv {border:1px solid #000; background:#A50000; color:#fff; padding:5px; margin:0 35px 0 15px;}
+  #leftprofile {float:left; width:300px; margin-right:20px; padding:0;}
+  #rightprofile {float:left; width:300px; padding:0;}
+  #inline {margin-left:20px;}
+  #creditcardbox #purchaseorderbox{font-size:1.2em; font-weight:bold; color:#4A6D00; margin-left:0; margin-right:0;}
+  #creditcardbox {width:305px; border:1px solid #ccc; float:left; margin-left:30px; margin-right:0; padding-top:0;}
+  #purchaseorderbox {width:205px; border:1px solid #ccc; float:left; margin-left:15px; padding-top:0;}
+  #mytable {border:0; padding-left:15px;}
+  #mytable.cust {width:550px;}
+  #mytable td {border:0; padding:6px 0px;}
+  #mytable td.leftcell {padding-right:30px; font-weight:normal;}
+  #mytable td.leftcellwide {padding-right:72px; font-weight:bold;}
+  #note {padding:10px; border:1px solid #FF9900; background:#FFFFCC; margin: 10px; width: 600px;}
+  #resultstable, .dataTbl {width: 100%; font-size:10pt; border-collapse: collapse;} 
+  #resultstable th, .dataTbl th {padding: 5px; border: 1px solid #444; background: #70B1E6; text-align:left; color: #333;}
+  #resultstable td, .dataTbl td {padding: 5px; border: 1px solid #666;}
+  #resultstable a, .dataTbl a {color:#3264BB;}
+  #resultstable a:hover, .dataTbl a:hover {text-decoration:none; color:#333;}
+  #resultstable tr:hover td, .dataTbl tr:hover td {background: #eee;}
+  #tinycolor {width:20px; height:20px; float:right; background:#fff;}
+  #colorbox {width:40px; height:40px; float:left; background:#fff;}	
+  #pagecount_table, #nextlabel_table, #prevlabel_table {margin-left:20px; margin-top:14px; float:left;}
+  #nextlabel_table a,  #prevlabel_table a {color:#E0880C; font-weight:bold;}
+  #nextlabel_table a:hover,  #prevlabel_table a:hover {color:#2A558A; text-decoration:none;}
+  #pagecount_table, #nextlabel_table, #prevlabel_table {margin-left:20px; margin-top:14px; float:left;}
+  #nextlabel_table a,  #prevlabel_table a {color:#E0880C; font-weight:bold;}
+  #nextlabel_table a:hover,  #prevlabel_table a:hover {color:#2A558A; text-decoration:none;}
+  #jtable {border:0; padding-left:15px;}
+  #jtable td {text-align:center; padding:5px; vertical-align:bottom;}
+  #catvideobox {float: left; width: 350px; margin: 5px 10px 10px 18px;}
+  #catvideobox img {margin-right: 10px; margin-bottom: 5px; float:left;}
+  #mainvideobox {float: left; width: 228px; border:1px dotted #888; margin: 10px 0 10px 15px; padding:3px; font-size:11px; background:#eee; line-height:13px; height:120px;}
+  #mainvideobox img {margin-right: 5px; margin-bottom: 15px; float: left; width:85px;}
+  #mainvideobox a {font-size:11px; color:#666; line-height:15px;}
+  #mainvideobox a:hover {color:#000; text-decoration:none;}
+  #sbox {padding-left: 15px; margin: 0 15px 15px 0 !important;}
+  #homeImg {margin-bottom: 25px;}
+  #learnPagePromos {padding: 20px 30px;}
+  #browseHdr {position: relative; top: 0; left: 0; margin: 35px 0;}
+  #itemCount, #pagination {position: absolute; top: 10px; left: 475px; width: 180px; font: 12pt 'Open Sans', sans-serif;}
+  #pagination {left: 655px; width: 385px; text-align: right;}
+  #browsingArea {float: left; width: 765px;}
+  #projectContent {float: left; width: 750px;}
+  #projectSidebar {float: left; width: 290px;}
+  #projectSidebar h3 {font: 12pt/1.3 'Open Sans', sans-serif; margin: 0; color: #7ABDE7;}
+  #tabRow {border-bottom: 1px solid #000; margin: 40px 0 25px;}
+  #tabRow a {color: #000; display: inline-block; height: 28px; padding: 15px; width: 160px; margin: 0 6px 0 15px; text-decoration: none; border: 1px solid #000; border-bottom: 0;}
+  #projectsResults, #videosResults {display: none;}
+  #productsResults, #projectsResults, #videosResults {position: relative; top: 0; left: 0; margin-top: 20px;}
+  #shopIntro {margin-bottom: 50px;}
+  #shopIntro h1 {font-size: 26pt; line-height: 1; margin: 15px 0 8px;}
+  
+  .paginationBlock {font: 12pt 'Open Sans', sans-serif; position: absolute; top: -25px; right: 0; width: 500px; height: 25px; text-align: right;}
+  .projectPhotoArea {width: 700px; padding-right: 30px; border-right: 1px solid #B0B0B0; margin-right: 19x;}
+  .projectVideoEmbed {margin-bottom: 20px;}
+  .swatchwrapper {margin:15px 0 15px 15px;}
+  .individualcolorswrapper {margin-left: 15px; margin-bottom: 15px;}
+  .collectionsrow {float:left; width:245px; text-align:center; min-height:175px;}
+  .collectionsrow a {color:#49BA78; text-decoration:none;}
+  .collectionsrow a:hover {text-decoration:underline;}
+  .productrow {float:left; width: 220px; min-height: 200px; margin-top: 20px; margin-right: 25px; text-align: center;}
+  .productrow img {max-width: 220px; max-height: 175px; height: 175px;}
+  .qtyblock {width:100px; margin: 10px auto;}
+  .qtyblock img, .productStyle1 .qtyblock img, .productStyle2 .qtyblock img {height: auto;}
+  .centertext, .ctr {text-align:center;}
+  .righttext, .rt {text-align:right;}
+  .blue {border-top: 1px solid #b3dff8;}
+  .aquaheading {color:#02adf0; font-weight:bold;}
+  .floatr {float:right; margin-left:10px;}
+  .floatl {float:left; margin-left:10px;}
+  .headl {width: 198px; float: left; margin: 0; padding: 0;}
+  .headl img {margin-top:20px;}
+  .headr {width:792px; float:right; margin: 0; padding: 0;}
+  .headr .search {float:right; height:170px;}
+  .nav {font: 12pt 'Open Sans', sans-serif;}
+  .nav ul {list-style: none; margin: 0; padding: 0; text-decoration: none;}
+  .nav ul ul {margin: 20px 0 20px 20px; font-size: 10pt;}
+  .nav ul .staffSub {margin: 0 0 20px 20px; font-size: 11pt;}
+  .nav ul .staffSub li {margin-top: 5px;}
+  .nav li {margin: 10px 0;}
+  .nav .productNav li {margin: 15px 0;}
+  .nav ul ul a, .nav .darkerNav {color: #00AA53;}
+  .nav a {text-decoration:none; color: #42BC78;}
+  .nav .currentLeftNav {color: #71C7F0;}
+  .nav a:hover {text-decoration: underline;}
+  .Lsidebar {margin-left: 5px; width:270px; float:left;}
+  .Rsidebar {width:175px; float:left;}
+  .Rboxes {width:164px; border-left:1px solid #b3dff8; border-top:1px solid #b3dff8; border-bottom:1px solid #b3dff8; padding:5px; margin-bottom:5px;}
+  .Rboxes p {padding:0;}
+  .contentarea {float:left; width:605px;}
+  .branddescription {margin-bottom:30px;}
+  .insidecontent {float:left; width:765px;}
+  .insidecontent p {margin-left:0;}
+  .space {height: 15px;}
+  .clr {clear: both;}
+  .qtyfield {padding:6px; border:1px solid #999; font-size:13px; text-align:center; width:30px;}
+  .totalrow {float:right; font-weight:bold; margin-right:6px; font-size:1.1em; color:#444;}
+  .sup {vertical-align: super; font-size:12px;}
+  .quantityarea {float:left; margin-right:5px; margin-left:7px; width: 60px;}
+  .qtybox {border:1px solid #333; padding:8px; font-weight:bold; width:27px; margin:0; text-align:center;}
+  .productname, .skustyle, .pricestyle, .productclr {font-size: 90%;}
+  .ctrImg {margin: 5px auto;}
+  #tNav .currentTopNav {color: #6FC5F4; font-weight: bold;}
+  .productDimensions {display: block; padding: 10px; border: 1px solid #000;}
+  .latestProduct {font: 11pt 'Open Sans', sans-serif; float: left; width: 250px; margin: 20px 5px 40px 0; text-align: center;}
+  .latestProduct a {display: block;}
+  .latestProduct div {border: 2px solid #fff; border-radius: 12px; padding: 10px; margin-bottom: 5px;}
+  .latestProduct div:hover {border-color: #71C7F0;}
+  .latestProduct img, .homeFeature img, .learnCol img {max-width: 220px; height: 150px;}
+  .checkoutOptions {padding-top: 20px; text-align: right;}
+  .homeFeature {font: 14pt 'Open Sans', sans-serif; display: block; float: left; width: 241px; border: 2px solid #737477; border-radius: 12px; text-align: center; margin: 0 20px 20px 0;}
+  .homeFeature:hover, .learnCol a:hover {text-decoration: none;}
+  .homeFeature img, .learnCol img {margin: 10px 0;}
+  .homeFeature .featureTxt, .learnCol .featureTxt {display: block; background: #737477; color: #fff; padding: 15px 0; border: 2px solid #737477; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;}
+  .homeFeature.lastHomeFeature {margin: 0 0 20px 0;}
+  .learnCol {float: left; width: 230px; margin: 40px 20px 20px 0; font: 14pt 'Open Sans', sans-serif;}
+  .learnCol .learnFeature {display: block; border: 2px solid #737477; border-radius: 12px; text-align: center;}
+  .learnCol ul {list-style: none; margin: 10px 0 0 20px; padding: 0; font-size: 11pt;}
+  .learnCol.lastCol {margin-right: 0;}
+  .productSeparator {clear: both; margin: 40px 0 25px; height: 1px; background: #000;}
+  .artistCol {float: left; width: 300px; margin-left: 50px;}
+  .communityHdr {margin-top: 35px;}
+  .phone {color: #000; cursor: auto;}
+  .phone:hover {text-decoration: none;}
+  .staffMember {float: left; width: 200px; margin: 0 50px 50px 0; font-size: 10pt; line-height: 1.4;}
+  .staffMember .staffName {font: 13pt/1.3 'Open Sans', sans-serif;}
+  .staffMember img {max-width: 200px; height: auto;}
+  .projectImg {float: left; width: 245px; margin: 0 10px 25px 0;}
+  .artistImg {float: left; width: 245px; margin-right: 25px;}
+  .projectImg img, .artistImg img {max-width: 245px; height: auto;}
+  .artistBio {float: left; width: 485px;}
+  .artistBio p {margin-top: 0;}
+  .nav .productNav .artistsSub {margin-top: 10px;}
+  .nav .productNav .artistsSub li {margin: 5px 0; font-size: 11pt;}
+  .productStyle1 {text-align: center; float:left; margin:0 10px 50px 0; width: 245px; min-height: 285px;}
+  .productStyle2 {text-align: center; float:left; margin:0 15px 45px 15px; width: 175px;}
+  .productStyle1 img, .productStyle2 img {max-width: 175px; height: 175px;}
+  .compatChart {padding: 7px 10px; background: #B0B0B1; color: #000; font-weight: bold;}
+  .learnBanner {max-width: 765px; height: auto; margin-bottom: 25px;}
+  .learnProduct {max-width: 130px; max-height: 150px; margin-right: 25px; margin-bottom: 25px;}
+  .videoEmbed {margin-bottom: 25px;}
+  .learnContentArea {float: left; width: 555px; margin-right: 20px;}
+  .learnContentArea p {margin-top: 0;}
+  .learnSeeAlso {font-size: 11pt; float: left; border-left: 1px solid #B0B0B0; width: 175px; padding-left: 10px;}
+  .projList li {margin-bottom: 8px;}
+  .facetCols {margin: 0; padding: 0; list-style: none; column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;}
+  .facetCols li {margin-bottom: 8px;}
+  .browsePhoto {float: left; width: 260px; margin-right: 25px; margin-bottom: 35px;}
+  .browsePhoto img {max-width: 260px; height: auto;}
+  .browseDesc {float: left; width: 750px; margin-bottom: 35px;}
+  .browseDesc.abbrev {width: 480px;}
+  .browseDesc h2 {margin-top: 0;}
+  .breadcrumbTrail {font: 10pt/1.3 'Open Sans', sans-serif; margin: 35px 0 25px;}
+  .breadcrumbTrail a {color: #6FC5F4;}
+  .currentTab {background: #72C7F0;}
+  .searchCount {padding-left: 40px;}
+  .searchList {margin: 0; padding: 0; list-style: none;}
+  .searchList li {float: left; margin: 35px 0 35px 15px; clear: both;}
+  .floatImg {float: left; margin-right: 40px; width: 150px; text-align: center;}
+  .floatImg img {max-width: 150px; max-height: 200px;}
+  .floatData {float: left; width: 815px;}
+  .productImgHldr {height: 185px;}
+  
+}

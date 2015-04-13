@@ -1,0 +1,6 @@
+<?
+function rewriteMainSiteMap($siteid,$domain)
+{
+	
+}
+?>

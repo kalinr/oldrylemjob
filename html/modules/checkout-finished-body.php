@@ -1,0 +1,3 @@
+<p>Your order had been received. &nbsp;Your order number is <strong>#<? echo $orderid; ?></strong>.</p>   
+	<p>Thank you for shopping on our website!  &nbsp;We'll get started on it right away and will send you a shipping confirmation email soon. &nbsp;Thank you for visiting ImagineCrafts.com!</p>
+	<p>To review your order history, you can always visit the <a href="/myaccount/orders">My Account</a> Orders Page</p>
