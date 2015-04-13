@@ -1,5 +1,5 @@
 <?
-function ordersCreate($accountid, $first, $last, $personordering, $organization, $address, $address2, $city, $state, $zip, $country, $shipping_organization, $shipping_address, $shipping_address2, $shipping_city, $shipping_state, $shipping_zip, $shipping_country, $shipping_method, $phone, $email, $subtotal, $discount_customer, $discount_promo, $tax, $tax_rate, $tax_code, $shipping, $total, $balance, $paid, $promo_code, $promo_description, $statusid, $transactionid, $cctype, $last4cc, $ponumber, $comments, $cart_array, $account, $ship_partial)
+function ordersCreate($accountid, $first, $last, $personordering, $organization, $address, $address2, $city, $state, $zip, $country, $shipping_organization, $shipping_address, $shipping_address2, $shipping_city, $shipping_state, $shipping_zip, $shipping_country, $shipping_method, $phone, $email, $email2, $subtotal, $discount_customer, $discount_promo, $tax, $tax_rate, $tax_code, $shipping, $total, $balance, $paid, $promo_code, $promo_description, $statusid, $transactionid, $cctype, $last4cc, $ponumber, $comments, $cart_array, $account, $ship_partial)
 {
 	$customerid = mysql_real_escape_string($customerid);
 	$datetime = currentDateTime();
@@ -28,6 +28,7 @@ function ordersCreate($accountid, $first, $last, $personordering, $organization,
 	$shipping_method = mysql_real_escape_string($shipping_method);
 	$phone = mysql_real_escape_string($phone);
 	$email = mysql_real_escape_string($email);
+	$email2 = mysql_real_escape_string($email2);
 
 	$subtotal = mysql_real_escape_string($subtotal);
 	$tax = mysql_real_escape_string($tax);
@@ -40,7 +41,7 @@ function ordersCreate($accountid, $first, $last, $personordering, $organization,
 	$comments = mysql_real_escape_string($comments);
 	$created = currentDateTime();
 
-	mysql_query("INSERT INTO orders(ACCOUNTID, DATETIME, FIRST, LAST, PERSON_ORDERING, ORGANIZATION, ADDRESS, ADDRESS2, CITY, STATE, ZIP, COUNTRY, SHIPPING_ORGANIZATION, SHIPPING_ADDRESS, SHIPPING_ADDRESS2, SHIPPING_CITY, SHIPPING_STATE, SHIPPING_ZIP, SHIPPING_COUNTRY, SHIPPING_METHOD, PHONE, EMAIL, SUBTOTAL, DISCOUNT_CUSTOMER, DISCOUNT_PROMO, TAX, TAX_RATE, TAX_CODE, SHIPPING, TOTAL, BALANCE, PAID, PROMO_CODE, PROMO_DESCRIPTION, STATUSID, TRANSACTIONID, CCTYPE, LAST4CC, PONUMBER, COMMENTS, SHIP_PARTIAL, CREATED) VALUES ('$accountid', '$datetime', '$first', '$last', '$personordering', '$organization', '$address', '$address2', '$city', '$state', '$zip', '$country', '$shipping_organization', '$shipping_address', '$shipping_address2', '$shipping_city', '$shipping_state', '$shipping_zip', '$shipping_country', '$shipping_method', '$phone', '$email', '$subtotal', '$discount_customer','$discount_promo', '$tax', '$tax_rate', '$tax_code', '$shipping', '$total', '$balance', '$paid', '$promo_code', '$promo_description', '$statusid', '$transactionid', '$cctype', '$last4cc', '$ponumber', '$comments', '$ship_partial', '$created')") or die(mysql_error());
+	mysql_query("INSERT INTO orders(ACCOUNTID, DATETIME, FIRST, LAST, PERSON_ORDERING, ORGANIZATION, ADDRESS, ADDRESS2, CITY, STATE, ZIP, COUNTRY, SHIPPING_ORGANIZATION, SHIPPING_ADDRESS, SHIPPING_ADDRESS2, SHIPPING_CITY, SHIPPING_STATE, SHIPPING_ZIP, SHIPPING_COUNTRY, SHIPPING_METHOD, PHONE, EMAIL, EMAIL2, SUBTOTAL, DISCOUNT_CUSTOMER, DISCOUNT_PROMO, TAX, TAX_RATE, TAX_CODE, SHIPPING, TOTAL, BALANCE, PAID, PROMO_CODE, PROMO_DESCRIPTION, STATUSID, TRANSACTIONID, CCTYPE, LAST4CC, PONUMBER, COMMENTS, SHIP_PARTIAL, CREATED) VALUES ('$accountid', '$datetime', '$first', '$last', '$personordering', '$organization', '$address', '$address2', '$city', '$state', '$zip', '$country', '$shipping_organization', '$shipping_address', '$shipping_address2', '$shipping_city', '$shipping_state', '$shipping_zip', '$shipping_country', '$shipping_method', '$phone', '$email', $email2, '$subtotal', '$discount_customer','$discount_promo', '$tax', '$tax_rate', '$tax_code', '$shipping', '$total', '$balance', '$paid', '$promo_code', '$promo_description', '$statusid', '$transactionid', '$cctype', '$last4cc', '$ponumber', '$comments', '$ship_partial', '$created')") or die(mysql_error());
 	$orderid = mysql_insert_id();
 
 	foreach($cart_array as $i)
