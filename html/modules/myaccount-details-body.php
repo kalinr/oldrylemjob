@@ -93,6 +93,10 @@
 			<td><input name="EMAIL" type="text" value="<? echo stripslashes($email); ?>" /></td>
 		</tr>
 		<tr>
+			<td class="leftcell">Email 2</td>
+			<td><input name="EMAIL2" type="text" value="<? echo stripslashes($email2); ?>" /></td>
+		</tr>
+		<tr>
 			<td class="leftcell">FAX</td>
 			<td><input name="FAX" type="text" value="<? echo stripslashes($fax); ?>" /></td>
 		</tr>

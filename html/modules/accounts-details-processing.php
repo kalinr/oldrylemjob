@@ -28,6 +28,7 @@ if($_POST['BUTTON'] == "Save" or $_POST['BUTTON'] == "Continue" or $_POST['BUTTO
 	$phone1 = trim($_POST['PHONE1']);
 	$phone2 = trim($_POST['PHONE2']);
 	$email = trim(mysqlClean(strtolower($_POST['EMAIL'])));
+	$email2 = trim(mysqlClean(strtolower($_POST['EMAIL2'])));
 	$fax = trim($_POST['FAX']);
 	$url = trim($_POST['URL']);
 	$discount = ereg_replace("[^0-9.-]","",$_POST['DISCOUNT']);
@@ -110,7 +111,7 @@ if($_POST['BUTTON'] == "Save" or $_POST['BUTTON'] == "Continue" or $_POST['BUTTO
 		{
 			if($content['ID'] == 10)
 				$bypass_initial_minimum = 1;
-			$accountid = accountsCreate($typeid, $account_number, $search_id, $first, $last, $organization, $address1, $address2, $city, $state, $zip, $country, $phone1, $phone2, $email, $fax, $url, $discount, $terms_id, $salesrep_id, $notes, $tax, $bypass_initial_minimum);
+			$accountid = accountsCreate($typeid, $account_number, $search_id, $first, $last, $organization, $address1, $address2, $city, $state, $zip, $country, $phone1, $phone2, $email, $email2, $fax, $url, $discount, $terms_id, $salesrep_id, $notes, $tax, $bypass_initial_minimum);
 			if($content['ID'] == 10) {
 
                           // $message = "Here is the Imagine Crafts password that has been automatically generated for you:<b> ".accountPassword($accountid)."</b>";
@@ -141,7 +142,7 @@ if($_POST['BUTTON'] == "Save" or $_POST['BUTTON'] == "Continue" or $_POST['BUTTO
 		}
 		else
 		{
-			accountsUpdate($query_array[1], $typeid, $account_number, $search_id, $first, $last, $organization, $address1, $address2, $city, $state, $zip, $country, $phone1, $phone2, $email, $password, $fax, $url, $discount, $terms_id, $salesrep_id, $notes, $tax,$bypass_initial_minimum);
+			accountsUpdate($query_array[1], $typeid, $account_number, $search_id, $first, $last, $organization, $address1, $address2, $city, $state, $zip, $country, $phone1, $phone2, $email, $email2, $password, $fax, $url, $discount, $terms_id, $salesrep_id, $notes, $tax,$bypass_initial_minimum);
 			httpRedirect("/".$content['MOD_NAME']."/".$query_array[1]);
 		}	
 		
@@ -170,6 +171,7 @@ else if(ereg_replace("[^0-9]","",$query_array[0] != '') || ereg_replace("[^0-9]"
 	$phone1 = $row['PHONE1'];
 	$phone2 = $row['PHONE2'];
 	$email = $row['EMAIL'];
+	$email2 = $row['EMAIL2'];
 	$password = $row['PASSWORD'];
 	$fax = $row['FAX'];
 	$url = $row['URL'];

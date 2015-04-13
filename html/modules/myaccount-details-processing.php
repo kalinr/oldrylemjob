@@ -13,6 +13,7 @@ if($_POST['BUTTON'] == "Save")
 	$phone1 = $_POST['PHONE1'];
 	$phone2 = $_POST['PHONE2'];
 	$email = $_POST['EMAIL'];
+	$email2 = $_POST['EMAIL2'];
 	$fax = $_POST['FAX'];
 	$url = $_POST['URL'];
 	
@@ -26,7 +27,7 @@ if($_POST['BUTTON'] == "Save")
 	{
 		if($account['EMAIL'] != $email)
 			emailChangeNotification($account['ID'],$account['EMAIL'],$email);
-		accountsUpdate($account['ID'], $account['TYPEID'], $account['ACCOUNT_NUMBER'], $account['SEARCH_ID'], $first, $last, $organization, $address1, $address2, $city, $state, $zip, $country, $phone1, $phone2, $email, $password, $fax, $url, $account['DISCOUNT'], $account['TERMS_ID'], $account['SALESREP_ID'], $account['NOTES'], $account['TAX'], $account['BYPASS_INITIAL_MINIMUM']);
+		accountsUpdate($account['ID'], $account['TYPEID'], $account['ACCOUNT_NUMBER'], $account['SEARCH_ID'], $first, $last, $organization, $address1, $address2, $city, $state, $zip, $country, $phone1, $phone2, $email, $email2, $password, $fax, $url, $account['DISCOUNT'], $account['TERMS_ID'], $account['SALESREP_ID'], $account['NOTES'], $account['TAX'], $account['BYPASS_INITIAL_MINIMUM']);
 		
 		$_SESSION['STATUS'] = "Account information has been saved.";
 		httpRedirect("/".$content['MOD_NAME']);
@@ -46,6 +47,7 @@ else if($account['ID'] != "")
 	$phone1 = $account['PHONE1'];
 	$phone2 = $account['PHONE2'];
 	$email = $account['EMAIL'];
+	$email2 = $account['EMAIL2'];
 	$fax = $account['FAX'];
 	$url = $account['URL'];
 }
