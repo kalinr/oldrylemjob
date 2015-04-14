@@ -93,7 +93,7 @@
 			<td><input name="EMAIL" type="text" value="<? echo stripslashes($email); ?>" /></td>
 		</tr>
 		<tr>
-			<td class="leftcell">Email 2</td>
+			<td class="leftcell">Additional Emails</td>
 			<td><input name="EMAIL2" type="text" value="<? echo stripslashes($email2); ?>" /></td>
 		</tr>
 		<tr>
