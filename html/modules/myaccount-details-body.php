@@ -118,7 +118,13 @@
 			{
 				echo '<td colspan="2" class="leftcell"><strong>Your account type requires an ImagineCRAFTS customer service representative to make changes to your account information. For assistance, please <a href="/contact">contact us</a>.</strong></td>';
 			}
-			?> 
+
+			echo "sending:";
+			sendOrderEmail($orderid)
+
+
+
+			?>
 			
 		</tr>																	
 	</table>

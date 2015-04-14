@@ -36,7 +36,7 @@ function smtpEmail($address,$subject,$message,$recipient_name="",$attachment="",
 
 		$l = count($cc);
 		for($i = 0; $i < $l; $i++){
-			$mail.addCC($cc[$i]);
+			$mail->addCC($cc[$i]);
 		}
 	}
 
