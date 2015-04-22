@@ -76,18 +76,25 @@ function direct_email($address,$subject,$message,$sender_name,$sender_email)
 }
 function emailChangeNotification($accountid,$origemail,$email)
 {
-	$message = "Your email has been changed on ".SITE_NAME." from $origemail to $email. This new email is effective immediately. If this was not changed by you, please contact $site_name immediately as this could be a security risk to your account.";
+	$message = "Your email has been changed on ".SITE_NAME." from $origemail to $email. This new email is effective immediately. If this was not changed by you or a trusted associate attached to this account, please contact $site_name immediately as this could be a security risk to your account.";
 	$message .= "<br /><br /><br />";
 	$message .= '<a href="http://www.imaginecrafts.com/mailing-list">Sign up for our mailing list</a> for the latest projects, giveaway news, and more.';
-	smtpEmail($origemail,SITE_NAME." - Alert! Email Change",$message,accountFirstLastName($accountid));
+
+
+	$accountEmails = accountEmails($accountid);
+	//smtpEmail($accountEmails["EMAIL"], "Order #" .$row['ID'] ." Confirmation", $message, "ImagineCRAFTS", "", $accountEmails["EMAIL2"]);
+
+	smtpEmail($origemail,SITE_NAME." - Alert! Email Change",$message,accountFirstLastName($accountid), "", $accountEmails["EMAIL2"]);
 }
 function passwordChangeNotification($accountid, $email,$password)
 {
 	$subject = "$site_name - ALERT! Account Password change";
-	$message = "Your password has been changed.<br /><br />This new password is effective immediately. If this was not changed by you, please contact ".SITE_NAME." immediately as this could be a security risk to your account.";
+	$message = "Your password has been changed.<br /><br />This new password is effective immediately. If this was not changed by you or a trusted associate attached to this account, please contact ".SITE_NAME." immediately as this could be a security risk to your account.";
 	$message .= "<br /><br /><br />";
 	$message .= '<a href="http://www.imaginecrafts.com/mailing-list">Sign up for our mailing list</a> for the latest projects, giveaway news, and more.';
-	smtpEmail($email,SITE_NAME." - Alert! Email Change",$message,accountFirstLastName($accountid));
+
+	$accountEmails = accountEmails($accountid);
+	smtpEmail($email,SITE_NAME." - Alert! Email Change",$message,accountFirstLastName($accountid), "", $accountEmails["EMAIL2"]);
 }
 function resetPasswordLink($id,$address,$receipt_name)
 {
@@ -100,8 +107,9 @@ function resetPasswordLink($id,$address,$receipt_name)
 	$message .= "<br /><br />If you have any questions, please contact customer service.";
 	$message .= "<br /><br /><br />";
 	$message .= '<a href="http://www.imaginecrafts.com/mailing-list">Sign up for our mailing list</a> for the latest projects, giveaway news, and more.';
-	smtpEmail($address,SITE_NAME." Password Reset",$message,$receipt_name);
 
+	$accountEmails = accountEmails($id);
+	smtpEmail($address,SITE_NAME." Password Reset",$message,$receipt_name, "", $accountEmails["EMAIL2"]);
 }
 function sendOrderEmail($orderid)
 {
@@ -238,6 +246,8 @@ function sendOrderEmail($orderid)
 
 	$accountEmails = accountEmails($row['ACCOUNTID']);
  	smtpEmail($accountEmails["EMAIL"], "Order #" .$row['ID'] ." Confirmation", $message, "ImagineCRAFTS", "", $accountEmails["EMAIL2"]);
+
+	//accountFirstLastName($accountid)
 
 	smtpEmail("michellel@imaginecrafts.com","Michelle Copy - Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS");
  	smtpEmail("sales@imaginecrafts.com","Sales Copy - Order #".$row['ID']." Confirmation",$message,"ImagineCRAFTS");
