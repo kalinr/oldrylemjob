@@ -202,7 +202,7 @@ elseif ($content['TYPEID'] == 2) {
    }  
 
   // if ($account['TYPEID'] == 1 or 1==1) echo '<li><a href="/myaccount/wholesaler-app">WHOLESALER APP</a></li>';
-  if ($account['TYPEID'] > 5) {
+  if ($account['TYPEID'] > 5 && $account['TYPEID'] < 9) {
     echo '<li><a href="/admin/orders">Administrative</a></li>';
   }
 

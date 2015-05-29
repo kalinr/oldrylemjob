@@ -19,7 +19,7 @@
 			$quantity = 0;
 		if($product['COLOR'] != "")
 			$product['NAME'] = $product['NAME'].' - '.$product['COLOR'];
-		if(2 <= $account['TYPEID'] && $account['TYPEID'] <= 5)
+		if((2 <= $account['TYPEID'] && $account['TYPEID'] <= 5) || $account['TYPEID'] == 9)
 			{
 			//$product['PRICE'] = $product['WHOLESALE_COST'];
 			$product['PRICE'] = getDiscountedCost($product['WHOLESALE_COST'],$productid,$account['DISCOUNT']);			

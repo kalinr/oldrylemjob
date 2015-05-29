@@ -101,7 +101,7 @@ if($_SESSION['USERID'] != '')
 	$result = mysql_query($query) or die ("error2" . mysql_error());
 	$account = mysql_fetch_array($result);
 	
-	if(2 <= $account['TYPEID'] && $account['TYPEID'] <= 5)
+	if((2 <= $account['TYPEID'] && $account['TYPEID'] <= 5) || $account['TYPEID'] == 9)
 		$account['WHOLESALE'] = 1;
 	else
 		$account['WHOLESALE'] = 0;

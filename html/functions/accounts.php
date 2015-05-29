@@ -198,7 +198,7 @@ function accountIsRetail($id)
 	$query = "SELECT TYPEID FROM accounts WHERE ID='$id'";
 	$result = mysql_query($query) or die ("error1" . mysql_error());
 	$row = mysql_fetch_array($result);
-	if($row['TYPEID']>=2 && $row['TYPEID'] <= 5)
+	if(($row['TYPEID']>=2 && $row['TYPEID'] <= 5) || $row['TYPEID'] == 9)
 		return false;
 	else
 		return true;
@@ -208,7 +208,8 @@ function accountCheckForWholesalerStatus($id)
 	$query = "SELECT TYPEID FROM accounts WHERE ID='$id'";
 	$result = mysql_query($query) or die ("error1" . mysql_error());
 	$row = mysql_fetch_array($result);
-	if($row['TYPEID'] == 2 || $row['TYPEID'] == 3 || $row['TYPEID'] == 4)
+
+	if($row['TYPEID'] == 2 || $row['TYPEID'] == 3 || $row['TYPEID'] == 4 || $row['TYPEID'] == 9)
 		return true;
 	else
 		return false;

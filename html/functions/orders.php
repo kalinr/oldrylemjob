@@ -54,7 +54,7 @@ function ordersCreate($accountid, $first, $last, $personordering, $organization,
 		if($row['COLOR'] != "")
 			$row['NAME'].' - '.$row['COLOR'];
 			
-		if(2 <= $account['TYPEID'] && $account['TYPEID'] <= 5)
+		if((2 <= $account['TYPEID'] && $account['TYPEID'] <= 5) || $account['TYPEID'] == 9)
 			{
 			//$row['PRICE'] = $row['WHOLESALE_COST'];
 			$row['PRICE'] = getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']);
