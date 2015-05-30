@@ -51,7 +51,7 @@ function outputPack($packItemRow) {
   echo '<br /><span class="skustyle">', stripslashes($row['SKU']), '</span>',
        '<br /><span class="pricestyle">$';
        
-       if ((2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) || $account['TYPEID'] == 9) {
+       if (2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) { 
          
          echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); 
        
@@ -109,7 +109,7 @@ function outputPack($packItemRow) {
       echo '<br /><span class="skustyle">', stripslashes($row['SKU']), '</span>',
            '<br /><span class="pricestyle">$';
        
-           if ((2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) || $account['TYPEID'] == 9) {
+           if (2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) { 
          
              echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); 
        
@@ -173,7 +173,7 @@ function outputCollection($row) {
   echo '<br /><span class="skustyle">', stripslashes($row['SKU']), '</span>',
        '<br /><span class="pricestyle">$';
        
-       if ((2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) || $account['TYPEID'] == 9) {
+       if (2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) { 
          
          echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); 
        
@@ -230,7 +230,7 @@ function outputCollection($row) {
     echo '<br /><span class="skustyle">', stripslashes($row['SKU']), '</span>',
          '<br /><span class="pricestyle">$';
        
-         if ((2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) || $account['TYPEID'] == 9) {
+         if (2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) { 
          
            echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); 
        
@@ -342,7 +342,7 @@ else
     <span class="productname" style="font-weight:normal"><? echo stripslashes($row['NAME']); ?></span>
     <? if($row['COLOR'] != ""){ echo '<br /><span class="productclr">' . $row['COLOR'] . '</span>'; } ?>
     <br /><span class="skustyle"><? echo stripslashes($row['SKU']); ?></span>
-    <br /><span class="pricestyle">$<? if((2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) || $account['TYPEID'] == 9){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>
+    <br /><span class="pricestyle">$<? if(2<=$account['TYPEID'] AND $account['TYPEID'] <= 5){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>
     <br />
 
       <div class="qtyblock">
@@ -429,7 +429,7 @@ $i=$i+1;
      <span class="productname" style="font-weight:normal"><? echo stripslashes($row['NAME']); ?></span>
      <? if($row['COLOR'] != ""){ echo '<br /><span class="productclr">' . $row['COLOR'] . '</span>'; } ?>
      <br /><span class="skustyle"><? echo stripslashes($row['SKU']); ?></span>
-     <br /><span class="pricestyle">$<? if((2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) || $account['TYPEID'] == 9){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>
+     <br /><span class="pricestyle">$<? if(2<=$account['TYPEID'] AND $account['TYPEID'] <= 5){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>
      <br />
 
       <div class="qtyblock">
@@ -497,7 +497,7 @@ $i=$i+1;
 	<span class="productname"><? echo stripslashes($row['NAME']); ?></span>
 	<? if($row['COLOR'] != ""){ echo '<br /><span class="productclr">' . $row['COLOR'] . '</span>'; } ?>
 	<br /><span class="skustyle"><? echo stripslashes($row['SKU']); ?></span>
-	<br /><span class="pricestyle">$<? if((2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) || $account['TYPEID'] == 9){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>
+	<br /><span class="pricestyle">$<? if(2<=$account['TYPEID'] AND $account['TYPEID'] <= 5){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>
 	<br />
 	</p>
 
@@ -607,7 +607,7 @@ $i=$i+1;
       <? if($row['COLOR'] != ""){ echo '<br /><span class="productclr">'.$row['COLOR'] . '</span>'; } ?>
       <br /><span class="skustyle"><? echo stripslashes($row['SKU']); ?></span>
       <? /*  First parent  product in row */ ?>
-      <br /><span class="pricestyle">$<? if((2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) || $account['TYPEID'] == 9){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>
+      <br /><span class="pricestyle">$<? if(2<=$account['TYPEID'] AND $account['TYPEID'] <= 5){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>      
 
       <div class="qtyblock">
       
@@ -727,7 +727,7 @@ if($count > 0) {
 	<span class="productname"><? echo stripslashes($row['NAME']); ?></span>
 	<? if($row['COLOR'] != ""){ echo '<br /><span class="productclr">'.stripslashes($row['COLOR']) . '</span>'; } ?>
 	<br /><span class="skustyle"><? echo stripslashes($row['SKU']); ?></span>
-	<br /><span class="pricestyle">$<? if((2<=$account['TYPEID'] AND $account['TYPEID'] <= 5) || $account['TYPEID'] == 9){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>
+	<br /><span class="pricestyle">$<? if(2<=$account['TYPEID'] AND $account['TYPEID'] <= 5){ echo number_format(getDiscountedCost($row['WHOLESALE_COST'],$productid,$account['DISCOUNT']),2); }else{ echo number_format($row['RETAIL_COST'],2); } ?> each</span>
 	<br />
 
 	  <div class="qtyblock">
