@@ -157,6 +157,49 @@
   .nav ul .staffSub li {margin-top: 5px;}
   .nav li {margin: 10px 0;}
   .nav .productNav li {margin: 15px 0;}
+
+  @media (max-device-height: 799px) {
+    .nav .productNav li {
+      font-size: 30pt;
+    }
+
+    body {
+      margin-left: 25px;
+    }
+
+    #tNav{
+      padding-right: 25px;
+      font-size: 30pt;
+    }
+
+    .latestProduct a{
+      font-size: 25pt;
+    }
+
+    #utilityNav{
+      font-size: 18pt;
+    }
+
+    #footerArea{
+      font-size: 16pt;
+    }
+
+    #socialMedia img{
+      transform: scale(2,2);
+      margin-left: 10px;
+    }
+
+    .artistCol ul li{
+      margin-top: 15px;
+    }
+
+    .artistCol ul li a{
+      font-size: 25pt;
+    }
+
+  }
+
+
   .nav ul ul a, .nav .darkerNav {color: #00AA53;}
   .nav a {text-decoration:none; color: #42BC78;}
   .nav .currentLeftNav {color: #71C7F0;}
