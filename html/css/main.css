@@ -158,46 +158,7 @@
   .nav li {margin: 10px 0;}
   .nav .productNav li {margin: 15px 0;}
 
-  @media (max-device-height: 799px) {
-    .nav .productNav li {
-      font-size: 30pt;
-    }
 
-    body {
-      margin-left: 25px;
-    }
-
-    #tNav{
-      padding-right: 25px;
-      font-size: 30pt;
-    }
-
-    .latestProduct a{
-      font-size: 25pt;
-    }
-
-    #utilityNav{
-      font-size: 18pt;
-    }
-
-    #footerArea{
-      font-size: 16pt;
-    }
-
-    #socialMedia img{
-      transform: scale(2,2);
-      margin-left: 10px;
-    }
-
-    .artistCol ul li{
-      margin-top: 15px;
-    }
-
-    .artistCol ul li a{
-      font-size: 25pt;
-    }
-
-  }
 
 
   .nav ul ul a, .nav .darkerNav {color: #00AA53;}
@@ -281,5 +242,72 @@
   .floatImg img {max-width: 150px; max-height: 200px;}
   .floatData {float: left; width: 815px;}
   .productImgHldr {height: 185px;}
+
+
+
+  @media (max-device-height: 799px) {
+    .nav .productNav li {
+      font-size: 30pt;
+    }
+
+    body {
+      margin-left: 25px;
+    }
+
+    #tNav{
+      padding-right: 25px;
+      font-size: 30pt;
+    }
+
+    .latestProduct a{
+      font-size: 25pt;
+    }
+
+    #utilityNav{
+      font-size: 18pt;
+    }
+
+    #footerArea{
+      font-size: 16pt;
+    }
+
+    #socialMedia img{
+      transform: scale(2,2);
+      margin-left: 10px;
+    }
+
+    .artistCol ul li{
+      margin-top: 15px;
+    }
+
+    .artistCol ul li a{
+      font-size: 25pt;
+    }
+
+    div.productStyle1{
+      font-size: 25pt;
+    }
+
+    .collectionsrow{
+      font-size: 25pt;
+    }
+
+    .artistsSub li a{
+      font-size: 18pt;
+    }
+
+    p.rt input{
+      transform: scale(2,2);
+    }
+
+    #AGREE{
+      font-size: 25pt;
+    }
+
+    .learnCol ul li{
+      font-size: 25pt;
+    }
+
+  }
   
 }
