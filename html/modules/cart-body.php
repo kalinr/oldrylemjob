@@ -124,7 +124,7 @@ if(sizeof($cart_array) > 0)
 			</p>
 		</form>
 		<?php
-		if (1==2)
+		if (1==1)
 		{
 		?>
 		<div style="margin-top: -25px; width: 270px;">
